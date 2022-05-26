@@ -30,6 +30,7 @@ public:
     int updatePage(int, float);
     int updatePage(int, String);
     int updatePage(String, float);
+    int updatePage(String, String);
     int deletePage(int);
 };
 
