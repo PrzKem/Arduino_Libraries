@@ -1,4 +1,4 @@
-#ifndef BUTOTNMENAGER_H
+#ifndef BUTTONMENAGER_H
 #define BUTTONMENAGER_H
 #include <Arduino.h>
 
