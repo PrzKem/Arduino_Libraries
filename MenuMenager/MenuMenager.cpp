@@ -10,7 +10,7 @@ To Do:
 
 //constructor filled with empty data
 MenuMenager::MenuMenager(){
-    this -> numOfPages = 0;
+    this -> firstPage = 0;
     this -> Page = nullptr;
 }
 
