@@ -18,7 +18,7 @@ MenuMenager::MenuMenager(){
 //@arg Page*: pointer to new page to be added
 int MenuMenager::postPage(Page* newPage){
     Page* lastPage = this->getLastPage();
-    lastPage -> nextPage = &newPage;
+    lastPage -> nextPage = newPage;
     *newPage -> nextPage = nullptr;
     *newPage -> ID = numOfPages;
     numOfPages++;
