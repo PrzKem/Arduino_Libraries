@@ -77,7 +77,7 @@ int MenuMenager::getPageID(String name){
     int idToReturn = -1;
 
     if (pageToGet != nullptr){
-                   idToReturn = *pageToGet->ID;
+                   idToReturn = pageToGet->ID;
     }
     return idToReturn;
 }
