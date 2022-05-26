@@ -10,17 +10,17 @@ To Do:
 
 //constructor filled with empty data
 MenuMenager::MenuMenager(){
-    this -> firstPage = 0;
-    this -> Page = nullptr;
+    this -> numOfPages = 0;
+    this -> firstPage = nullptr;
 }
 
 //function to add page to list
 //@arg Page*: pointer to new page to be added
 int MenuMenager::postPage(Page* newPage){
     Page* lastPage = this->getLastPage();
-    *lastPage.nextPage = newPage;
-    *newPage.nextPage = nullptr;
-    *newPage.ID = numOfPages;
+    *lastPage -> nextPage = newPage;
+    *newPage -> nextPage = nullptr;
+    *newPage -> ID = numOfPages;
     numOfPages++;
     return 0;
 }
