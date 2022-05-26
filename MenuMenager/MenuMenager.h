@@ -21,7 +21,7 @@ private:
     int numOfPages;
 public:
     MenuMenager();
-    int postPage(Page);
+    int postPage(Page*);
     Page* getLastPage();
     Page* getPage(int);
     Page* getPage(String);
