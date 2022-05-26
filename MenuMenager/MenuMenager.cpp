@@ -20,7 +20,7 @@ int MenuMenager::postPage(Page* newPage){
     Page* lastPage = this->getLastPage();
     lastPage -> nextPage = newPage;
     newPage -> nextPage = nullptr;
-    *newPage -> ID = numOfPages;
+    newPage -> ID = numOfPages;
     numOfPages++;
     return 0;
 }
@@ -90,7 +90,7 @@ String MenuMenager::getPageName(int ID){
     String nameToReturn = "";
 
     if (pageToGet != nullptr){
-                   nameToReturn = *pageToGet->name;
+                   nameToReturn = pageToGet->name;
     }
     return nameToReturn;
 }
@@ -105,7 +105,7 @@ int MenuMenager::updatePage(int ID, float newValue){
                    return -1;
 
     pageToModify = this->getPage(ID);
-    *pageToModify->value = newValue;
+    pageToModify->value = newValue;
     return 0;
 }
 
@@ -119,7 +119,7 @@ int MenuMenager::updatePage(int ID, String newTitle){
                    return -1;
 
     pageToModify = this->getPage(ID);
-    *pageToModify->title = newTitle;
+    pageToModify->title = newTitle;
     return 0;
 }
 
@@ -153,7 +153,7 @@ int MenuMenager::deletePage(int ID) {
     if(ID < 0)
                    return -2;
 
-    pageBefore.nextPage = pageAfter;
+    pageBefore->nextPage = pageAfter;
     pageToBeDeleted = nullptr;
     return 0;
 }
