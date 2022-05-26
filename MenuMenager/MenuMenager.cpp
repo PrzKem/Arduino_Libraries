@@ -111,6 +111,10 @@ String MenuMenager::getPageName(int ID){
     return nameToReturn;
 }
 
+
+//function to get page title connected to ID
+//@arg ID: page ID
+//@return: title of founded page, empty if page cannot be found
 String MenuMenager::getPageTitle(int ID){
     Page* pageToGet = this->getPage(ID);
     String titleToReturn = "";
@@ -121,14 +125,33 @@ String MenuMenager::getPageTitle(int ID){
     return titleToReturn;
 }
 
+//function to get page title connected to name
+//@arg name: page name
+//@return: title of founded page, empty if page cannot be found
 String MenuMenager::getPageTitle(String name){
-    Page* pageToGet = this->getPage(name);
-    String titleToReturn = "";
+  int pageID = this->getPageID(name);
+  return this->getPageTitle(pageID);
+}
 
-    if (pageToGet != nullptr){
-                   titleToReturn = pageToGet->title;
-    }
-    return titleToReturn;
+//function to get page value connected to ID
+//@arg ID: page ID
+//@return: value of founded page, empty if page cannot be found
+float MenuMenager::getPageValue(int ID){
+  float toRet = 0.0;
+  Page* pageToGet = this->getPage(ID);
+
+  if (pageToGet != nullptr){
+                 toRet = pageToGet->value;
+  }
+  return toRet;
+}
+
+//function to get page value connected to name
+//@arg name: page name
+//@return: value of founded page, empty if page cannot be found
+float MenuMenager::getPageValue(String name){
+  int pageID = this->getPageID(name);
+  return this->getPageValue(pageID);
 }
 
 //function to update page value with setted ID

@@ -30,6 +30,8 @@ public:
     String getPageName(int);
     String getPageTitle(int);
     String getPageTitle(String);
+    float getPageValue(int);
+    float getPageValue(String);
     int updatePage(int, float);
     int updatePage(int, String);
     int updatePage(String, float);
