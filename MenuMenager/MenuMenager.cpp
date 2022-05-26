@@ -19,7 +19,7 @@ MenuMenager::MenuMenager(){
 int MenuMenager::postPage(Page* newPage){
     Page* lastPage = this->getLastPage();
     lastPage -> nextPage = newPage;
-    *newPage -> nextPage = nullptr;
+    newPage -> nextPage = nullptr;
     *newPage -> ID = numOfPages;
     numOfPages++;
     return 0;
