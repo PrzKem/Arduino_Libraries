@@ -1,0 +1,26 @@
+#######################################
+# Syntax Coloring Map For Adafruit_NeoPixel
+#######################################
+# Class
+#######################################
+
+MenuMenager         	KEYWORD1
+
+#######################################
+# Methods and Functions
+#######################################
+
+postPage			KEYWORD2
+updatePage    KEYWORD2
+getPage       KEYWORD2
+deletePage    KEYWORD2
+
+#######################################
+# Constants
+#######################################
+
+ID		      LITERAL1
+nextPage		LITERAL1
+name		    LITERAL1
+title		    LITERAL1
+value		    LITERAL1
