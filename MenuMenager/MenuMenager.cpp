@@ -136,7 +136,7 @@ int MenuMenager::updatePage(String pageName, float newValue){
 //@arg pageName: name of page to apply changes
 //@arg newTitle: new title to be setted
 //@return: error code
-int MenuMenager::updatePage(String pageName, float newTitle) {
+int MenuMenager::updatePage(String pageName, String newTitle) {
     int pageID = this->getPageID(pageName);
     return this->updatePage(pageID, newTitle);
 }
