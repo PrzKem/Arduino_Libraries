@@ -27,6 +27,8 @@ public:
     Page* getPage(String);
     int getPageID(String);
     String getPageName(int);
+    String getPageTitle(int);
+    String getPageTitle(String);
     int updatePage(int, float);
     int updatePage(int, String);
     int updatePage(String, float);

@@ -23,7 +23,8 @@ void setup()
     Serial.print("Title #");
     Serial.print(i);
     Serial.print(": ");
-    Serial.println((*(mm.getPage(i))).title);
+    //Serial.println((*(mm.getPage(i))).title);
+    Serial.println(mm.getPageTitle(i))
   }
 }
 

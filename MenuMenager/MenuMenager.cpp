@@ -103,6 +103,26 @@ String MenuMenager::getPageName(int ID){
     return nameToReturn;
 }
 
+String MenuMenager::getPageTitle(int ID){
+    Page* pageToGet = this->getPage(ID);
+    String titleToReturn = "";
+
+    if (pageToGet != nullptr){
+                   titleToReturn = pageToGet->title;
+    }
+    return titleToReturn;
+}
+
+String MenuMenager::getPageTitle(String name){
+    Page* pageToGet = this->getPage(name);
+    String titleToReturn = "";
+
+    if (pageToGet != nullptr){
+                   titleToReturn = pageToGet->title;
+    }
+    return titleToReturn;
+}
+
 //function to update page value with setted ID
 //@arg ID: id of page to apply change
 //@arg newValue: new value to be setted
