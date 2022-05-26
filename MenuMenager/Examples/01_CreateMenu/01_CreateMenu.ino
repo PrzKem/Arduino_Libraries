@@ -24,7 +24,7 @@ void setup()
     Serial.print(i);
     Serial.print(": ");
     //Serial.println((*(mm.getPage(i))).title);
-    Serial.println(mm.getPageTitle(i))
+    Serial.println(mm.getPageTitle(i));
   }
 }
 
