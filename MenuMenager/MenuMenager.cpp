@@ -37,11 +37,11 @@ Page* MenuMenager::getLastPage(){
 Page* MenuMenager::getPage(int ID){
     Page* actualPage = this -> firstPage;
     if(ID > numOfPages)
-                   return nullptr
+                   return nullptr;
 
     for(int i=0;i<ID;i++)
     {
-                   actualPage = actualPage.nextPage;
+                   actualPage = actualPage->nextPage;
                    if (actualPage.ID == ID)
                        break;
     }
