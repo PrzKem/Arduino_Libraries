@@ -6,13 +6,13 @@
 #define MENU_MENAGER_H
 #include <Arduino.h>
 
-struct  {
+struct  Page {
     int ID;           //id  counting from 0
     Page* nextPage;
     String name;
     String title;
     float value;
-} Page;
+};
 
 
 class MenuMenager {
