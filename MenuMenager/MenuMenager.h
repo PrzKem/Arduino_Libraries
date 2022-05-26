@@ -29,7 +29,7 @@ public:
     String getPageName(int);
     int updatePage(int, float);
     int updatePage(int, String);
-    int updatePageValue(String, float);
+    int updatePage(String, float);
     int deletePage(int);
 };
 
