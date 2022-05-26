@@ -14,9 +14,9 @@ void setup()
   p2.value = 1.0;
   p3.value = 2.0;
 
-  mm.postPage(p1);
-  mm.postPage(p2);
-  mm.postPage(p3);
+  mm.postPage(&p1);
+  mm.postPage(&p2);
+  mm.postPage(&p3);
 
   for(int i=0;i<3;i++)
   {
