@@ -92,6 +92,12 @@ int MenuMenager::getPageID(String name){
     return idToReturn;
 }
 
+//function to get num of pages
+//@return: num of pages, int
+int MenuMenager::getNumOfPages(){
+  return this->numOfPages;
+}
+
 //function to get page name connected to ID
 //@arg ID: page ID
 //@return: name of founded page, empty if page cannot be found

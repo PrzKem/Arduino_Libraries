@@ -26,6 +26,7 @@ public:
     Page* getPage(int);
     Page* getPage(String);
     int getPageID(String);
+    int getNumOfPages();
     String getPageName(int);
     String getPageTitle(int);
     String getPageTitle(String);
