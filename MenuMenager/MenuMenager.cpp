@@ -42,7 +42,7 @@ Page* MenuMenager::getPage(int ID){
     for(int i=0;i<ID;i++)
     {
                    actualPage = actualPage->nextPage;
-                   if (actualPage.ID == ID)
+                   if (actualPage->ID == ID)
                        break;
     }
     return actualPage;
@@ -57,13 +57,13 @@ Page* MenuMenager::getPage(String name)
     int i=0;
     for(i=0;i<this->numOfPages;i++)
     {
-                   if(name == actualPage.name)
+                   if(name == actualPage->name)
                        break;
 
-                   actualPage = actualPage.nextPage;
+                   actualPage = actualPage->nextPage;
     }
 
-    if(name == actualPage.name)
+    if(name == actualPage->name)
                    return actualPage;
     else
                    return nullptr;
@@ -77,7 +77,7 @@ int MenuMenager::getPageID(String name){
     int idToReturn = -1;
 
     if (pageToGet != nullptr){
-                   idToReturn = *pageToGet.ID;
+                   idToReturn = *pageToGet->ID;
     }
     return idToReturn;
 }
@@ -90,7 +90,7 @@ String MenuMenager::getPageName(int ID){
     String nameToReturn = "";
 
     if (pageToGet != nullptr){
-                   nameToReturn = *pageToGet.name;
+                   nameToReturn = *pageToGet->name;
     }
     return nameToReturn;
 }
@@ -105,7 +105,7 @@ int MenuMenager::updatePage(int ID, float newValue){
                    return -1;
 
     pageToModify = this->getPage(ID);
-    *pageToModify.value = newValue;
+    *pageToModify->value = newValue;
     return 0;
 }
 
@@ -119,7 +119,7 @@ int MenuMenager::updatePage(int ID, String newTitle){
                    return -1;
 
     pageToModify = this->getPage(ID);
-    *pageToModify.title = newTitle;
+    *pageToModify->title = newTitle;
     return 0;
 }
 
