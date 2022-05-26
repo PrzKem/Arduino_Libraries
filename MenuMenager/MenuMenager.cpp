@@ -17,7 +17,7 @@ MenuMenager::MenuMenager(){
 //function to add page to list
 //@arg Page*: pointer to new page to be added
 int MenuMenager::postPage(Page* newPage){
-  if (this -> numOfPages >0)
+  if (this -> numOfPages > 0)
   {
     Page* lastPage = this->getLastPage();
     lastPage -> nextPage = newPage;
@@ -29,14 +29,16 @@ int MenuMenager::postPage(Page* newPage){
   else
   {
     this -> firstPage = newPage;
+    newPage -> ID = numOfPages;
     numOfPages++;
+    return 0;
   }
 }
 
 //function to get last page from list
 //@return: last page from list
 Page* MenuMenager::getLastPage(){
-               return this->getPage(this->numOfPages);
+               return this->getPage(this->numOfPages-1);
 }
 
 //function to get page
